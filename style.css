@@ -1,0 +1,174 @@
+*, html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url(/img/background/bgbayu.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/* NAVBAR */
+.container-navbar {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: #010101;
+    display: flex;
+    height: 10vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    background: transparent;
+    justify-content: space-between;  
+    transition: top 0.3s;  
+}
+
+.container-navbar .nama h1 {
+    color: #010101;
+    margin-left: 10%;
+    font-size: 3rem;
+}
+
+.container-navbar .nama h1 span {
+    color: #444;
+}
+
+.container-navbar .menu .ul-navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-navbar .menu .ul-navbar .li-navbar {
+    margin: 1px 10px;
+    padding: 10px 5px;
+    list-style: none;
+}
+
+.container-navbar .menu .ul-navbar .li-navbar a {
+    color: #010101;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+.container-navbar .menu .ul-navbar .li-navbar a:hover {
+    color: #010101;
+}
+
+.container-navbar .menu .ul-navbar .li-navbar a::after {
+    content: '';
+    display: block;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.3rem solid #010101;
+    transform: scale(0);
+    transition: 0.2s linear;
+}
+
+.container-navbar .menu .ul-navbar .li-navbar a:hover::after {
+    transform: scale(0.7);
+}
+/* NAVBAR END */
+
+/* CONTENT */
+.container-content {
+    height: 110vh;
+}
+
+.container-content .container-foto {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-content .container-foto .kotak-foto {
+    padding: 6rem;
+    border-radius: 80px;
+    border: 2px solid rgba(255, 255, 255, .5);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+}
+
+.container-content .container-foto .kotak-foto p {
+    margin-bottom: 1rem;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 25px;
+}
+.container-content .container-foto .kotak-foto img {
+    border-radius: 150px;
+}
+
+
+
+
+/* CONTENT END */
+
+/* FOOTER */
+footer {
+    background-color: #111;
+    height: 13vh;
+}
+
+footer .sosmed .ul-sosmed {
+    display: flex;
+    justify-content: center;
+}
+
+footer .sosmed .ul-sosmed .li-sosmed {
+    list-style-type: none;
+    padding: 0.15rem 0.15rem;
+    background-color: #fff;
+    margin: 2rem 0.5rem;
+    border-radius: 150px;
+}
+
+footer .sosmed .ul-sosmed .li-sosmed:hover {
+    background-color: #010101;
+}
+
+footer .sosmed .ul-sosmed .li-sosmed a {
+    color: #010101;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+footer .sosmed .ul-sosmed .li-sosmed a:hover {
+    color: #fff;
+}
+
+footer .credit,
+footer .credit a {
+    text-decoration: none;
+    color: #ffff;
+    font-weight: 700;
+}
+
+footer .credit a:hover {
+    color: #444;
+}
+/* FOOTER END */
+
+/* Media Queries */
+/* Laptop */
+@media (max-width: 1366px) {
+    html {
+        font-size: 75%;
+    }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+    html {
+        font-size: 62.5%;
+    }
+}
+
+/* Mobile Phone */
+@media (max-width: 450px) {
+    html {
+        font-size: 55%;
+    }
+}
+/* Media Queries End */
