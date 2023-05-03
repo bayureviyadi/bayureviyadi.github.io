@@ -1,10 +1,64 @@
+/* Variable CSS */
+:root{
+    --header-height: 3rem;
+
+    /* Colors */
+    --first-color: #3E0E12;
+    --first-color-dark: #2F0A0D;
+    --text-color: #524748;
+    --first-color-light: #7B6F71;
+    --first-color-lighten: #FBF9F9;
+    /* Colors END */
+
+    /* Font and typography */
+    --body-font: 'Poppins', sans-serif;
+    --biggest-font-size: 2.5rem;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1.125rem;
+    --normal-font-size: .938rem;
+    --small-font-size: .813rem;
+    --smaller-font-size: .75rem;
+    /* Font and typoghraphy END */
+
+    /* Font Weight */
+    --font-medium: 500;
+    --font-semi-bold: 600;
+    --font-bold:700;
+    /* Font Weight END*/
+
+    /* Margenes */
+    --mb-1: .5rem;
+    --mb-2: 1rem;
+    --mb-3: 1.5rem;
+    --mb-4: 2rem;
+    --mb-5: 2.5rem;
+    --mb-6: 3rem;
+    /* Margenes END */
+
+    /* z index */
+    --z-normal: 1;
+    --z-tooltip:10;
+    --z-fixed: 100;
+    /* z index END */
+}
+
 *, html {
     margin: 0;
     padding: 0;
 }
 
 body {
-    background-color: #222;
+    background-image: url(/img/background/bgbayu.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 /* NAVBAR */
 .container-navbar {
@@ -16,15 +70,20 @@ body {
     top: 0;
     left: 0;
     right: 0;
-    z-index: 9999;
+    z-index: var(--z-fixed);
     background: transparent;
     justify-content: space-between;  
-    transition: top 0.3s;
+    transition: top 0.3s;  
 }
 
-.container-navbar .nama h1 {
+.container-navbar .nama h1,
+.container-navbar .menu .ul-navbar,
+.container-navbar .hamburger-menu{
+    max-width: 1024px;
+    width: calc(100% -2rem);
     color: #010101;
-    margin-left: 10%;
+    margin-left: var(--mb-2);
+    margin-right: var(--mb-2);
     font-size: 3rem;
 }
 
@@ -66,7 +125,19 @@ body {
 .container-navbar .menu .ul-navbar .li-navbar a:hover::after {
     transform: scale(0.7);
 }
+
+.container-navbar .hamburger-menu a {
+    text-decoration: none;
+    color: #010101;
+}
+/* di laptop hamburger menu tidak muncul */
+#hamburger-menu {
+    display: none;
+}
+/* di laptop hamburger menu tidak muncul END */
+
 /* NAVBAR END */
+
 
 /* CONTENT */
 .container-content {
@@ -165,6 +236,60 @@ footer .credit a:hover {
     html {
         font-size: 62.5%;
     }
+
+    #hamburger-menu {
+        display: inline-block;
+    }
+
+
+    /* Sidebar */
+    .container-navbar .menu .ul-navbar{
+        display: block;
+    }
+
+    .container-navbar .menu .ul-navbar .li-navbar a {
+        color: #fff;
+    }
+
+    .container-navbar .menu .ul-navbar .li-navbar a:hover {
+        color: #fff;
+    }
+    
+    .container-navbar .menu .ul-navbar .li-navbar a::after {
+        content: '';
+        display: block;
+        padding-bottom: 0.5rem;
+        border-bottom: 0.2rem solid #fff;
+        transform: scale(0);
+        transition: 0.2s linear;
+    }
+    
+    .container-navbar .menu .ul-navbar .li-navbar a:hover::after {
+        transform: scale(1);
+    }
+
+    .menu {
+        position: absolute;
+        top: 3;
+        right: -100%;
+        background-color: #111;
+        width: 20rem;
+        border-radius: 10px;
+    }
+
+    .menu.active{
+        right: 0%;
+        top: 3rem;
+        transition: .4s;
+    }
+
+    .menu .ul-navbar {
+        display: block;
+        margin: 1rem;
+        padding: 1rem;
+        font-size: 3rem;
+    }
+    /* Sidebar End */
 }
 
 /* Mobile Phone */

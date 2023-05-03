@@ -271,6 +271,7 @@ footer .credit a:hover {
     .menu.active{
         right: 0%;
         top: 3rem;
+        transition: .4s;
     }
 
     .menu .ul-navbar {
