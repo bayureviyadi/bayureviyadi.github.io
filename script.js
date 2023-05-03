@@ -1,3 +1,10 @@
+// Toggle class active
+const menu = document.querySelector ('.menu');
+// ketika hamburger menu di klik
+document.querySelector('#hamburger-menu').onclick = () => {
+    menu.classList.toggle('active');
+};
+
 // NAVBAR I
 var prevScrollpos = window.pageYOffset;
 window.onscroll = function() {
